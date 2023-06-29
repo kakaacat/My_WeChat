@@ -73,6 +73,28 @@
 #endif // __osf__
 
 
+#ifndef INADDR_NONE
+/* $$.Ic INADDR_NONE$$ */
+#define	INADDR_NONE	0xffffffff	// should have been in <netinet/in.h>
+#endif // INADDR_NONE
+
+#ifndef SHUT_RD				// these three Posix.1g names are quite new
+#define SHUT_RD	  0			//shutdown for reading
+#define SHUT_WR   1			//shutdown for writing
+#define SHUT_RDWR 2			//shutdown for reading and writing
+/* $$.Ic SHUT_RD$$ */
+/* $$.Ic SHUT_WR$$ */
+/* $$.Ic SHUT_RDWR$$ */
+#endif // !SHUT_RD
+
+/* *INDENT-OFF* */
+#ifndef INET_ADDRSTRLEN
+/* $$.Ic INET_ADDRSTRLEN$$ */
+#define INET_ADDRRSTRLEN	16	/* "ddd.ddd.ddd.ddd\0"
+                                    1234567890123456 */
+#endif // !INET_ADDRSTRLEN
+
+
 
 
 
