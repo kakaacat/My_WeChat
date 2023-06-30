@@ -141,9 +141,13 @@
   <ItemGroup>
     <ClInclude Include="msg.h" />
     <ClInclude Include="unp.h" />
+    <ClInclude Include="unpthread.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="unpthread.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
