@@ -37,5 +37,8 @@
     <ClCompile Include="unpthread.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="net.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
