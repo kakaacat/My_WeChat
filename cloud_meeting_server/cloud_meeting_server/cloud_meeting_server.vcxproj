@@ -148,6 +148,8 @@
     <Text Include="readme.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="error.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="net.cpp" />
     <ClCompile Include="unpthread.cpp" />
   </ItemGroup>

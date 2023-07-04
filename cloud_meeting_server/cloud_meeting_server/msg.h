@@ -52,6 +52,11 @@ public:
 		cond = PTHREAD_COND_INITIALIZER;
 	}
 
+
+	/// <summary>
+	/// 消息入栈
+	/// </summary>
+	/// <param name="msg"></param>
 	void push_msg(MSG msg)
 	{
 		Pthread_mutex_lock(&lock);
@@ -65,6 +70,10 @@ public:
 										//如果没有线程处在阻塞等待状态,pthread_cond_signal也会成功返回。
 	}
 
+	/// <summary>
+	/// 从发送队列中取出一个消息
+	/// </summary>
+	/// <returns></returns>
 	MSG pop_msg()
 	{
 		Pthread_mutex_lock(&lock);
@@ -79,6 +88,9 @@ public:
 		return msg;
 	}
 
+	/// <summary>
+	/// 清除
+	/// </summary>
 	void clear()
 	{
 		Pthread_mutex_lock(&lock);
