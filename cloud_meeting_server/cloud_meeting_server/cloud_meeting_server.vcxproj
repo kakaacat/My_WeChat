@@ -151,7 +151,10 @@
     <ClCompile Include="error.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="net.cpp" />
+    <ClCompile Include="room.cpp" />
     <ClCompile Include="unpthread.cpp" />
+    <ClCompile Include="userdeal.cpp" />
+    <ClCompile Include="wrapunix.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
