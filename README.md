@@ -1,2 +1,2 @@
-# cloud_conferencing
-cpp+qt实现的视频会议
+# MyChat
+cpp+qt实现的聊天交流软件
