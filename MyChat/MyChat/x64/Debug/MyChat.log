@@ -1,1 +1,5 @@
-﻿  uic UserLogin.ui
+﻿  UserLogin.cpp
+  ccmainwindow.cpp
+  moc_ccmainwindow.cpp
+  LINK : 没有找到 E:\qt_projects\My_WeChat\MyChat\x64\Debug\MyChat.exe 或上一个增量链接没有生成它；正在执行完全链接
+  MyChat.vcxproj -> E:\qt_projects\My_WeChat\MyChat\x64\Debug\MyChat.exe
