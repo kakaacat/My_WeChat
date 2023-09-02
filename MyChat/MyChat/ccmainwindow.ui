@@ -134,7 +134,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="placehold2">
+         <widget class="QPushButton" name="palcehold2">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -605,7 +605,7 @@ font:75 12pt &quot;微软雅黑&quot;;</string>
        <number>6</number>
       </property>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_6"/>
+       <layout class="QHBoxLayout" name="bottomLayout_up"/>
       </item>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_5">

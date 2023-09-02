@@ -150,6 +150,7 @@ void TitleBar::paintEvent(QPaintEvent* event)
 	{
 		setFixedWidth(parentWidget()->width());
 	}
+	QWidget::paintEvent(event);
 }
 
 //双击相应事件，主要实现双击标题栏进行最大最小化操作

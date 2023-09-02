@@ -160,6 +160,7 @@ void BasicWindow::mousePressEvent(QMouseEvent* event)
 	{
 		m_mousePressed = true;
 		m_mousePoint = event->globalPos() - pos();
+		event->accept();
 	}
 }
 

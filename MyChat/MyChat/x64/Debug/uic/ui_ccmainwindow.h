@@ -34,7 +34,7 @@ public:
     QLabel *titleIcon;
     QSpacerItem *horizontalSpacer;
     QPushButton *placehold1;
-    QPushButton *placehold2;
+    QPushButton *palcehold2;
     QPushButton *sysmin;
     QPushButton *sysclose;
     QHBoxLayout *horizontalLayout_3;
@@ -58,7 +58,7 @@ public:
     QTreeWidget *treeWidget;
     QWidget *bottomWidget;
     QVBoxLayout *verticalLayout_5;
-    QHBoxLayout *horizontalLayout_6;
+    QHBoxLayout *bottomLayout_up;
     QHBoxLayout *horizontalLayout_5;
     QPushButton *bottomBtn_1;
     QPushButton *bottomBtn_2;
@@ -122,14 +122,14 @@ public:
 
         horizontalLayout->addWidget(placehold1);
 
-        placehold2 = new QPushButton(titleWidget);
-        placehold2->setObjectName(QString::fromUtf8("placehold2"));
-        sizePolicy1.setHeightForWidth(placehold2->sizePolicy().hasHeightForWidth());
-        placehold2->setSizePolicy(sizePolicy1);
-        placehold2->setMinimumSize(QSize(24, 24));
-        placehold2->setMaximumSize(QSize(24, 24));
+        palcehold2 = new QPushButton(titleWidget);
+        palcehold2->setObjectName(QString::fromUtf8("palcehold2"));
+        sizePolicy1.setHeightForWidth(palcehold2->sizePolicy().hasHeightForWidth());
+        palcehold2->setSizePolicy(sizePolicy1);
+        palcehold2->setMinimumSize(QSize(24, 24));
+        palcehold2->setMaximumSize(QSize(24, 24));
 
-        horizontalLayout->addWidget(placehold2);
+        horizontalLayout->addWidget(palcehold2);
 
         sysmin = new QPushButton(titleWidget);
         sysmin->setObjectName(QString::fromUtf8("sysmin"));
@@ -321,11 +321,11 @@ public:
         verticalLayout_5->setContentsMargins(11, 11, 11, 11);
         verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
         verticalLayout_5->setContentsMargins(6, 6, 6, 6);
-        horizontalLayout_6 = new QHBoxLayout();
-        horizontalLayout_6->setSpacing(6);
-        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
+        bottomLayout_up = new QHBoxLayout();
+        bottomLayout_up->setSpacing(6);
+        bottomLayout_up->setObjectName(QString::fromUtf8("bottomLayout_up"));
 
-        verticalLayout_5->addLayout(horizontalLayout_6);
+        verticalLayout_5->addLayout(bottomLayout_up);
 
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setSpacing(6);
@@ -419,7 +419,7 @@ public:
         CCMainWindowClass->setWindowTitle(QCoreApplication::translate("CCMainWindowClass", "CCMainWindow", nullptr));
         titleIcon->setText(QString());
         placehold1->setText(QString());
-        placehold2->setText(QString());
+        palcehold2->setText(QString());
         sysmin->setText(QString());
         sysclose->setText(QString());
         headLabel->setText(QString());
