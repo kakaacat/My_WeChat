@@ -1,2 +1,17 @@
-﻿  ccmainwindow.cpp
+﻿  moc ccmainwindow.h
+  moc titlebar.h
+  moc basicwindow.h
+  moc NotifyManager.h
+  moc UserLogin.h
+  CustomMenu.cpp
+  SysTray.cpp
+  UserLogin.cpp
+  ccmainwindow.cpp
+  moc_CustomMenu.cpp
+  moc_SysTray.cpp
+  moc_ccmainwindow.cpp
+  moc_titlebar.cpp
+  moc_basicwindow.cpp
+  moc_NotifyManager.cpp
+  moc_UserLogin.cpp
   MyChat.vcxproj -> E:\qt_projects\My_WeChat\MyChat\x64\Debug\MyChat.exe

@@ -1,4 +1,5 @@
 ﻿#include "ccmainwindow.h"
+#include "SysTray.h"
 #include <QProxyStyle>
 #include <QPainter>
 
@@ -58,10 +59,21 @@ void CCMainWindow::initControl()
     ui.bottomLayout_up->addWidget(addOtherAppExtension(":/Resources/MainWindow/app/app_9.png", "app_9"));
     ui.bottomLayout_up->addStretch();
 
+
+    connect(ui.sysmin, SIGNAL(clicked(bool)), this, SLOT(onShowHide(bool)));
+    connect(ui.sysclose, SIGNAL(clicked(bool)), this, SLOT(onShowClose(bool)));
+
+    SysTray* sysTray(new SysTray(this));
+
 }
  
 void CCMainWindow::setUserName(const QString& username)
 {
+    ui.nameLabel->adjustSize();
+    //文本过长则进行省略
+    QString name = ui.nameLabel->fontMetrics().elidedText(username, Qt::ElideRight, ui.nameLabel->width());
+
+    ui.nameLabel->setText(name);
 }
 
 void CCMainWindow::setLevelPixmap(int level)
@@ -122,4 +134,42 @@ QWidget* CCMainWindow::addOtherAppExtension(const QString& appPath, const QStrin
     btn->setObjectName(appName);
     btn->setProperty("hashborder", true);
     return btn;
+}
+
+
+void CCMainWindow::initContactTree()
+{
+    //展开与收缩时的信号
+    connect(ui.treeWidget, SIGNAL(itemClicked(QTreeWidgetItem*, int)), this, SLOT(onItemClicked(QTreeWidgetItem*, int)));
+    connect(ui.treeWidget, SIGNAL(itemExpanded(QTreeWidgetItem*, int)), this, SLOT(onItemExpanded(QTreeWidgetItem*)));
+    connect(ui.treeWidget, SIGNAL(itemCollapsed(QTreeWidgetItem*, int)), this, SLOT(onItemCollapsed(QTreeWidgetItem*)));
+    connect(ui.treeWidget, SIGNAL(itemDoubleClicked(QTreeWidgetItem*, int)), this, SLOT(onItemDoubleClicked(QTreeWidgetItem*, int)));
+
+    //根节点
+    QTreeWidgetItem* pRootGroupItem = new QTreeWidgetItem;
+    pRootGroupItem->setChildIndicatorPolicy(QTreeWidgetItem::ShowIndicator);
+    pRootGroupItem->setData(0, Qt::UserRole, 0);    
+}
+
+
+void CCMainWindow::resizeEvent(QResizeEvent* event)
+{
+    setUserName(QString::fromLocal8Bit("333333333333333333333"));
+    BasicWindow::resizeEvent(event);
+}
+
+void CCMainWindow::onItemClicked(QTreeWidgetItem* item, int column  )
+{
+}
+
+void CCMainWindow::onItemExpanded(QTreeWidgetItem* item)
+{
+}
+
+void CCMainWindow::onItemCollapsed(QTreeWidgetItem* item)
+{
+}
+
+void CCMainWindow::onItemDoubleClicked(QTreeWidgetItem* item, int column)
+{
 }

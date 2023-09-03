@@ -53,7 +53,11 @@
   <ItemGroup>
     <ClCompile Include="basicwindow.cpp" />
     <ClCompile Include="CommonUtils.cpp" />
+    <ClCompile Include="CustomMenu.cpp" />
     <ClCompile Include="NotifyManager.cpp" />
+    <ClCompile Include="RootContatItem.cpp" />
+    <ClCompile Include="SysTray.cpp" />
+    <ClCompile Include="TalkWindowShell.cpp" />
     <ClCompile Include="titlebar.cpp" />
     <ClCompile Include="UserLogin.cpp" />
     <QtRcc Include="ccmainwindow.qrc" />
@@ -61,6 +65,7 @@
     <QtMoc Include="ccmainwindow.h" />
     <ClCompile Include="ccmainwindow.cpp" />
     <ClCompile Include="main.cpp" />
+    <QtUic Include="TalkWindowShell.ui" />
     <QtUic Include="UserLogin.ui" />
   </ItemGroup>
   <ItemGroup>
@@ -74,6 +79,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommonUtils.h" />
+    <QtMoc Include="RootContatItem.h" />
+    <QtMoc Include="TalkWindowShell.h" />
+    <QtMoc Include="CustomMenu.h" />
+    <QtMoc Include="SysTray.h" />
     <QtMoc Include="UserLogin.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

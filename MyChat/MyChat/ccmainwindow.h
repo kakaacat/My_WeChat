@@ -19,6 +19,17 @@ public:
     void setStatusMenuIcon(const QString& statusPath); //设置状态
     //添加应用部件
     QWidget* addOtherAppExtension(const QString& appPath, const QString& appName);
+    void initContactTree();
+
+private:
+    void resizeEvent(QResizeEvent* event);
+
+
+private slots:
+    void onItemClicked(QTreeWidgetItem* item, int column);
+    void onItemExpanded(QTreeWidgetItem* item);
+    void onItemCollapsed(QTreeWidgetItem* item);
+    void onItemDoubleClicked(QTreeWidgetItem* item, int column);
 
 private:
     Ui::CCMainWindowClass ui;
